@@ -23,9 +23,9 @@ namespace :db do
       Student.create_table
     end
 
-  desc 'outputs hello to the terminal'
-    task :hello do
-      puts "hello from Rake!"
+  desc 'Seeds records to your database'
+    task :seed => :environment do
+      require_relative './db/seeds.rb'
     end
 
 end
