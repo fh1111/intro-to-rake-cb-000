@@ -13,3 +13,24 @@ desc 'outputs hola to the terminal'
   end
 
 end
+
+
+
+namespace :db do
+
+  desc 'outputs hello to the terminal'
+    task :migrate => :environment do
+      puts "hello from Rake!"
+    end
+
+  desc 'outputs hello to the terminal'
+    task :hello do
+      puts "hello from Rake!"
+    end
+
+end
+
+
+task :environment do
+  require_relative './config/environment'
+end
